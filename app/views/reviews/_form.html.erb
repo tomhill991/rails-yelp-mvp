@@ -1,0 +1,21 @@
+<%= simple_form_for([@restaurant, @review]) do |f| %>
+  <div class="form-group">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <h1><%= @restaurant.name %></h1>
+        <%= f.label :content, "Write your review here" %>
+        <%= f.text_field :content%>
+        </div>
+    </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+        <%= f.input :rating, collection: [0, 1 , 2, 3, 4, 5 ] %>
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+        <%= f.button :submit  %>
+        </div>
+    </div>
+  </div>
+<% end %>

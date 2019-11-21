@@ -1,0 +1,23 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <div class="form-group">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <%= f.label :name, "Enter a restaurant name" %>
+        <%= f.text_field :name%>
+        </div>
+    </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+        <%= f.label :address, "Enter an address for the restaurant" %>
+        <%= f.text_field :address %>
+         <%= f.input :category, collection: ['chinese', 'italian', 'japanese', 'french', 'belgian'] %>
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+        <%= f.button :submit  %>
+        </div>
+    </div>
+  </div>
+<% end %>
+
